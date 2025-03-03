@@ -64,52 +64,6 @@ class _AddSemesterScreenState extends State<AddSemesterScreen> {
               hint: 'Semester Name',
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Select Year:',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-            ),
-            Row(
-              children: [
-                Checkbox(
-                  activeColor: ColorConstants.primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                  value: _selectedYear == '2019-2022',
-                  onChanged: (value) {
-                    setState(() {
-                      _selectedYear = value! ? '2019-2022' : null;
-                    });
-                  },
-                ),
-                const Text(
-                  '2019-2022',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(width: 20),
-                Checkbox(
-                  activeColor: ColorConstants.primaryColor,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(4)),
-                  value: _selectedYear == '2023-Current',
-                  onChanged: (value) {
-                    setState(() {
-                      _selectedYear = value! ? '2023-Current' : null;
-                    });
-                  },
-                ),
-                const Text(
-                  '2023-Current',
-                  style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
             SizedBox(
               width: double.infinity,
               child: CustomButton(
